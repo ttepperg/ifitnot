@@ -1,0 +1,10 @@
+plotfile="output_test_ifit/test_io_h1_gauss_SN1000_PSF20.0.dat"
+ion="h1"
+profile="gauss"
+fwhm=20.0
+logNlim=13.0-0.5
+logNmin=13.0-0.5
+logNmax=15.0+0.5
+bmin=10.0-10.0
+bmax=100.0+10.0
+sn=1000

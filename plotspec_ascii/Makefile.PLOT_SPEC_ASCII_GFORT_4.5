@@ -1,0 +1,29 @@
+FC          = gfortran-mp-4.5
+FDEBUG      = -ffixed-line-length-132 -fno-second-underscore \
+-fbounds-check -ffpe-trap=invalid,zero -g
+FOPTIMIZED  = -ffixed-line-length-132 -fno-second-underscore \
+-fbounds-check -ffpe-trap=invalid,zero -O
+#
+
+FFLAGS = $(FDEBUG)
+
+TARGET = plot_spec_ascii
+
+OBJECTS = plot_spec_ascii.o
+MODULES = ps_modules.o
+
+plot_spec_ascii: $(OBJECTS) ps_subroutines.o $(MODULES) ps_modules.f
+	$(FC) $(FFLAGS) $(INC) $(LIB) $(OBJECTS) ps_subroutines.o $(MODULES) -o $(TARGET)
+
+plot_spec_ascii.o:  plot_spec_ascii.f ps_subroutines.o $(MODULES)
+	$(FC) $(FFLAGS) $(INC) plot_spec_ascii.f -c
+
+ps_subroutines.o:  ps_subroutines.f $(MODULES)
+	$(FC) $(FFLAGS) $(INC) ps_subroutines.f -c
+
+ps_modules.o:  ps_modules.f
+	$(FC) $(FFLAGS) $(INC) ps_modules.f -c
+
+clean:
+	rm *.o
+	rm *.mod

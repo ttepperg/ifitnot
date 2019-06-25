@@ -1,0 +1,31 @@
+FC          = gfortran
+
+FDEBUG      = -Wall -pedantic -fbackslash -ffixed-line-length-132 \
+-fno-second-underscore -fbounds-check \
+-ffpe-trap=invalid,zero,overflow,underflow -fdump-core -fbacktrace -ggdb3
+
+FOPTIMIZED  = -Wall -fbackslash -ffixed-line-length-132 -fno-second-underscore \
+-fbounds-check \
+-ffpe-trap=invalid,zero,overflow,underflow -fdump-core -fbacktrace -ggdb3 -O
+
+#FFLAGS = $(FDEBUG)
+FFLAGS = $(FOPTIMIZED)
+
+#
+LIB    = -L/home/volans/tepper/hdf5-1.8.12/hdf5/lib -L/home/volans/tepper/hdf5-1.8.12/HDF5_Wrapper/lib/ \
+-Wl,-rpath=/home/volans/tepper/hdf5-1.8.12/HDF5_Wrapper/lib -lhdf5 -lhdfwrapper -lhdf5_fortran
+INC     = -I/home/volans/tepper/hdf5-1.8.12/hdf5/include -I/home/volans/tepper/hdf5-1.8.12/HDF5_Wrapper/lib/
+
+TARGET = profiles_hdf5_loop
+
+OBJECTS = profiles_hdf5_loop.o
+
+profiles_hdf5_loop: $(OBJECTS)
+	$(FC) $(FFLAGS) $(INC) $(LIB) $(OBJECTS) -o $(TARGET)
+
+profiles_hdf5_loop.o:  profiles_hdf5_loop.f
+	$(FC) $(FFLAGS) $(INC) $(LIB) profiles_hdf5_loop.f -c
+
+clean:
+	rm profiles_hdf5_loop.o
+	rm profiles_hdf5_loop

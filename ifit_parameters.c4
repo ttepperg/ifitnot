@@ -1,0 +1,6 @@
+!       ion-dependent parameters
+c4	ION(:)%name -- designation of ion
+1.0d10	col_dens_min -- minimum column density (absolute)
+1.0d20	col_dens_max -- maximum column density (absolute)
+1.00d0	b_value_min -- minimum b-value (absolut)
+1.00d3	b_value_max -- maximum b-value (absolute)

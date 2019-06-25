@@ -1,0 +1,8 @@
+#!/bin/bash
+printf "USAGE: compile <filename>\n"
+printf "to compile a file named 'filename.f'\n"
+printf "Compiles a FORTRAN90 code. Filename WITHOUT extension'.f'!\n"
+#g77 -Wall -Wsurprising -W -ffast-math -funroll-all-loops -ffortran-bounds-check -pedantic -ffixed-line-length-none -finit-local-zero -o $1 $1'.f'
+#gfortran -Wall -Wsurprising -W -ffast-math -funroll-all-loops -pedantic -ffixed-line-length-none -o $1 $1'.f'
+gfortran -Wall -Wsurprising -W -ffast-math -funroll-all-loops -ffixed-line-length-132 -fno-second-underscore -g -o $1 $1'.f'
+printf "Done!\n"

@@ -1,0 +1,24 @@
+!       GENERAL PARAMETERS
+gauss	profile -- assumed line profile: voigt | gauss
+1.60d1	fwhm_kms -- width of Gaussian (instrumental) broadening in km/s
+3.00d0	Nsigma -- detection threshold (absorption_profiles)
+1.00d0	scale_noise -- factor to rescale noise level
+0.683d0	conf_hi -- higher goodness-of-fit confidence level
+0.954d0	conf_lo -- lower goodness-of-fit confidence level
+1.00d1	z_qso -- emission redshift; used to constrain the wavelength range
+TRUE		use_smooth_flux_str -- fit using the smoothed flux; useful when S/N <~ 10
+TRUE		single_ion_fit_str -- fit using the strongest transition of first ion
+FALSE		spectrum_shifted_str -- cycles spectrum to avoid features at boundaries
+FALSE		visual_str -- to visualise fit on-the-fly
+FALSE		test_run_str -- set to TRUE *only* when running synspec_test.bash!
+FALSE		debug_str -- output a lot of useful information during runtime
+FALSE		verbose_str -- output useful information during runtime; overrides debug!
+FALSE		quite_str -- output during runtime kept to a minimum; overrides verbose & debug!
+FALSE		psplot_str -- graphical output; requires gnuplot and ghostview!
+!
+!       LIST OF IONS
+1	num_ions -- number of ions; followed by list in the ORDER to be fitted!
+h1	ION(:)%name -- designation of ion
+c4	ION(:)%name -- designation of ion
+o6	ION(:)%name -- designation of ion
+mg10	ION(:)%name -- designation of ion

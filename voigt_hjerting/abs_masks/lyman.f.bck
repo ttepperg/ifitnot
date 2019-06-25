@@ -1,0 +1,163 @@
+*	----------------------------------------------------------------
+*	Voigt-Profile approximation to model Lyman absorption lines
+*	----------------------------------------------------------------
+*	(C) Thorsten Tepper Garcia 2006
+*	Based on the approximation to the Voigt-Hjerting function
+*	published in:
+*	Tepper Garcia, Thorsten
+*	Monthly Notices of the Royal Astronomical Society; Volume 369, 
+*	Issue 4, Page 2025
+*	Please refer to the author when using this approximation.
+
+	PROGRAM lyman
+
+*	Lyman-Series Absorption Lines are calculated according to the
+*	approximation for a<<1 (where a is the damping parameter in the
+*	Voigt-Hjerting function H(a,x)) given by (Tepper Garcia 2006)
+*	
+*	H(a,x) = h0-a/sqrt(PI)/x^2*(h0^2*(4x^4 + 7x^2 + 4 + Q) - 1 - Q)
+*	with h0=exp(-x^2), Q=1.5 x^(-2)
+*
+*	The arguments of the program are the Doppler parameter b (in
+*	units km/s) and the logarithmic column density (in units of
+*	log10(cm^{-2})). The output of the program is the Voigt-profile
+*	as a function of wavelength for the first 31 transitions of the
+*	Lyman series. All physical and other needed parameters are
+*	included in the file 'parameter.h'The wavelength range is
+*	[900.0,1400] Angstroem, with a resolution of 0.01 A. The
+*	datablock corresponding to each line is separated by a '#'. The
+*	output is standard output and can be redirected to any desired
+*	file.
+*	The resolution, number of lines (transitions), etc. can be
+*	modified if needed. Note however, that nlines <= 31!
+*	Furthermore, the author is not responsible for any modifications
+*	done to this code in its original form.
+*	The line parameters (central wavelength of the transition, osc.
+*	strength, and gamma-value) are contained in the file
+*	'lyman_series.dat', and were taken from Morton's Compilation
+*	(see Tepper-Garcia 2006 for corresponding reference).
+*	Please report any bugs or problems to:
+*	tepper@astro.physik.uni-goettingen.de
+*	----------------------------------------------------------------
+*	Variables declaration
+*	----------------------------------------------------------------
+        implicit none
+	include'parameters.f'
+	intrinsic DEXP, DSQRT
+     	double precision central_wl(nlines), wavelength,
+     +	fvalue(nlines), gamma(nlines)
+     	double precision b, logNHI, NHI, dopp_width, damping, alpha, 
+     +	tau_neg, sqrtPI
+	double precision voigt_hjerting
+	character*5 dummy
+	integer argcount
+	integer i,j
+
+*	----------------------------------------------------------------
+*	Getting arguments
+*	----------------------------------------------------------------
+	argcount = IArgC()
+      	if (argcount .lt. 3) then
+         print *,'USAGE: lyman <transition> <b (km/s)> <log10NHI (log10(cm^{-2})>'
+	 STOP
+      	end if
+	
+	call GetArg(1,dummy)
+	read (dummy,'(I2)') line_num
+
+	call GetArg(2,dummy)
+	read (dummy,'(F5.2)') b
+
+	call GetArg(3,dummy)
+	read (dummy,'(F5.2)') logNHI
+
+*	----------------------------------------------------------------
+*	Reading Lyman Series line-parameters
+*	----------------------------------------------------------------
+*	Reads in wavelength (in Angstroem), oscillator strength and
+*	gamma-value (in Hz) for the first nlines=31 transitions of the
+*	Lyman Series
+
+ 116    FORMAT(T15, F9.4, 1X, F8.6, 2X, 1pE7.3)
+	open(70, FILE = 'lyman_series.dat')
+	 read(70,*)
+	 read(70,*)   
+	 do i=1,nlines
+	  read(70,116) central_wl(i), fvalue(i), gamma(i)
+	 end do	 
+	close(70)
+
+*	----------------------------------------------------------------
+*	Calculating optical depth as a function of wavelength
+*	----------------------------------------------------------------
+ 100	format(a,f9.3,d14.6,f9.3,d14.6,d14.6,$)
+	sqrtPI = DSQRT(PI)
+	NHI = 10.0D0**logNHI				! in cm^{-2}
+	
+	i=line_num
+
+	wavelength = 900.0D0			       ! in Angstroem
+
+*	The following parameters are in cgs units      
+
+	dopp_width = (central_wl(i)*b/CLIGHT)*1.0D-3
+	damping = (central_wl(i)*gamma(i)/(4.0D0*PI*b))*1.0D-13
+	alpha = (sqrtPI*ERADIUS*NHI*(central_wl(i)*central_wl(i))*
+     1  fvalue(i)/dopp_width)*1.0D-16
+	
+	do j = 1, points
+	
+	 tau_neg = (-alpha)*
+     1	 voigt_hjerting(damping,b,central_wl(i),wavelength)
+*	 write(6,100) '\r',central_wl(i),dopp_width, wavelength,
+*     1	 ((wavelength-central_wl(i))/dopp_width)*1.0D-8, DEXP(tau_neg)
+*	 wavelength = wavelength + resolution
+
+	 write(6,*) central_wl(i),dopp_width, wavelength,
+     1	 ((wavelength-central_wl(i))/dopp_width)*1.0D-8, DEXP(tau_neg)
+	 wavelength = wavelength + resolution
+	
+	end do
+	
+*	print*
+*	print*, '#'
+	
+*	----------------------------------------------------------------
+	END PROGRAM
+*	----------------------------------------------------------------
+
+*=======================================================================
+	function voigt_hjerting(a,b,cwl,wl)
+*	Returns the value of the Voigt-Hjerting function H(a,x) as a
+*	function of wavelength for a given a-parameter, Doppler
+*	parameter (in km/s), and central wavelength (in Angstroem) of
+*	the corresponding transition.
+
+	intrinsic DSQRT
+	double precision voigt_hjerting
+	double precision a, b, dopp, cwl, wl
+	double precision x,x2,h0,Q,PI,CLIGHT
+	parameter (PI=3.141593D0,CLIGHT=2.9979D+10)
+	
+	dopp = (cwl*b/CLIGHT)*1.0D-3
+	x = ((wl-cwl)/dopp)*1.0D-8
+
+	if (DABS(x).GT.4.0D-4) then		!arbitrarily set
+
+	x2 = x*x
+	h0 = DEXP(-x2)
+	Q = 1.5D0/x2
+
+	 voigt_hjerting = h0 - a/DSQRT(PI)/x2*
+     1	 (h0*h0*(4.0D0*x2*x2 + 7.0D0*x2 + 4.0D0 + Q) - 1.0D0 - Q)
+
+	else					!limes for x -> 0
+
+	 voigt_hjerting = 1.0d0 - 2.0D0*a/DSQRT(PI)
+
+	endif
+	
+	return
+*	----------------------------------------------------------------
+	end function
+*	----------------------------------------------------------------

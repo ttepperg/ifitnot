@@ -1,0 +1,22 @@
+FC          = gfortran
+FDEBUG      = -ffixed-line-length-132 -fno-second-underscore -g
+FOPTIMIZED  = -ffixed-line-length-132 -fno-second-underscore -O
+#
+LIB    = -L/home/volans/tepper/hdf5/lib -L/home/volans/tepper/hdf5/HDF5_Wrapper/lib/ -lhdf5 -lhdfwrapper
+INC     = -I/home/volans/tepper/hdf5/include  -I/home/volans/tepper/hdf5/HDF5_Wrapper/lib/
+
+FFLAGS = $(FDEBUG)
+
+TARGET = profiles_hdf5_loop
+
+OBJECTS = profiles_hdf5_loop.o
+
+profiles_hdf5_loop: $(OBJECTS)
+	$(FC) $(FFLAGS) $(INC) $(LIB) $(OBJECTS) -o $(TARGET)
+
+profiles_hdf5_loop.o:  profiles_hdf5_loop.f
+	$(FC) $(FFLAGS) $(INC) $(LIB) profiles_hdf5_loop.f -c
+
+clean:
+	rm profiles_hdf5_loop.o
+	rm profiles_hdf5_loop

@@ -1,0 +1,35 @@
+FC          = gfortran-mp-4.8
+
+FDEBUG      = -Wall -pedantic -fbackslash -ffixed-line-length-132 \
+-fno-second-underscore -fbounds-check \
+-ffpe-trap=invalid,zero,overflow,underflow -fbacktrace -ggdb3 
+
+FOPTIMIZED  = -Wall -fbackslash -ffixed-line-length-132 \
+-fno-second-underscore -fbounds-check \
+-ffpe-trap=invalid,zero,overflow,underflow -O
+
+#FFLAGS = $(FDEBUG)
+FFLAGS = $(FOPTIMIZED)
+
+TARGET = ifitnot
+
+OBJECTS = ifitnot.o
+MODULES = ifit_modules.o
+
+ifitnot: $(OBJECTS) ifit_subroutines.o $(MODULES) ifit_modules.f
+	$(FC) $(FFLAGS) $(OBJECTS) ifit_subroutines.o $(MODULES) -o $(TARGET)
+
+ifitnot.o:  ifitnot.f ifit_subroutines.o $(MODULES)
+	$(FC) $(FFLAGS) ifitnot.f -c
+
+ifit_subroutines.o:  ifit_subroutines.f $(MODULES)
+	$(FC) $(FFLAGS) ifit_subroutines.f -c
+
+ifit_modules.o:  ifit_modules.f
+	$(FC) $(FFLAGS) ifit_modules.f -c
+
+clean:
+	rm ifit_modules.o
+	rm ifit_subroutines.o
+	rm ifitnot.o
+	rm ifitnot

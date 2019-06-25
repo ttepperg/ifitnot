@@ -1,0 +1,107 @@
+GFORTRAN module version '10' created from atomic_data.f
+MD5:74b0687255050d124fe5b765a606396a -- If you edit this, you'll get what you deserve.
+
+(() () () () () () () () () () () () () () () () () () () () () () ()
+() () () ())
+
+()
+
+(('atom' 'derived_types' 2) ('ion' 'derived_types' 3) ('single_t'
+'derived_types' 4))
+
+()
+
+()
+
+()
+
+(2 'Atom' 'derived_types' '' 1 ((DERIVED UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 SEQUENCE ALLOC_COMP) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0
+0 () () 0 ((5 'name' (CHARACTER 1 0 0 0 CHARACTER ((CONSTANT (INTEGER 4
+0 0 0 INTEGER ()) 0 '10'))) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (6 'mass' (REAL 8 0 0 0 REAL ())
+() (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ()) (7 'num_ions' (INTEGER 4 0 0 0 INTEGER ()) () (
+UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ()) (8 'ion' (DERIVED 3 0 0 0 DERIVED ()) (1 0 DEFERRED ()
+()) (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0
+ALLOCATABLE DIMENSION) UNKNOWN-ACCESS (STRUCTURE (DERIVED 3 0 0 0
+DERIVED ()) 0 ((() ()) (() ()) ((NULL (DERIVED 4 0 0 0 DERIVED ()) 0) ()))
+()))) PUBLIC (() () () ()) () 0 0 34209977)
+3 'Ion' 'derived_types' '' 1 ((DERIVED UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 SEQUENCE ALLOC_COMP) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0
+0 () () 0 ((9 'name' (CHARACTER 1 0 0 0 CHARACTER ((CONSTANT (INTEGER 4
+0 0 0 INTEGER ()) 0 '10'))) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (10 'num_transitions' (INTEGER 4
+0 0 0 INTEGER ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+UNKNOWN 0 0) UNKNOWN-ACCESS ()) (11 'transition' (DERIVED 4 0 0 0
+DERIVED ()) (1 0 DEFERRED () ()) (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 ALLOCATABLE DIMENSION) UNKNOWN-ACCESS ())) PUBLIC (
+() () () ()) () 0 0 29521536)
+4 'Single_t' 'derived_types' '' 1 ((DERIVED UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 SEQUENCE) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 0 (
+(12 'lambda_0' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (13 'f_osc' (REAL 8
+0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+UNKNOWN 0 0) UNKNOWN-ACCESS ()) (14 'big_gamma' (REAL 8 0 0 0 REAL ()) ()
+(UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ())) PUBLIC (() () () ()) () 0 0 88967845)
+15 'atom' 'derived_types' '' 1 ((PROCEDURE UNKNOWN-INTENT UNKNOWN-PROC
+DECL UNKNOWN 0 0 FUNCTION GENERIC) (REAL 4 0 0 0 REAL ()) 0 0 () () 0 ()
+() () 0 0)
+16 'derived_types' 'derived_types' '' 1 ((MODULE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
+0 () () () 0 0)
+17 'doublei' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '8') () 0 () () () 0 0)
+18 'doubler' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '8') () 0 () () () 0 0)
+19 'invalid' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '20'))) 0 0 () (CONSTANT (
+CHARACTER 1 0 0 0 CHARACTER (())) 0 20 'INVALID             ') () 0 () ()
+() 0 0)
+20 'invalid_i' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '-1234567890') () 0 () () ()
+0 0)
+21 'invalid_r' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '-0.1d42aea2879f2e@83') () 0 () () ()
+0 0)
+22 'ion' 'derived_types' '' 1 ((PROCEDURE UNKNOWN-INTENT UNKNOWN-PROC
+DECL UNKNOWN 0 0 FUNCTION GENERIC) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () ()
+0 () () () 0 0)
+23 'real_double' 'set_precision' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+24 'real_single' 'set_precision' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 4 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+25 'selected_int_kind' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 FUNCTION) (REAL 4 0 0 0 REAL ()) 0 0 ()
+() 25 () () () 0 0)
+26 'selected_real_kind' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 FUNCTION) (REAL 4 0 0 0 REAL ()) 0 0 ()
+() 26 () () () 0 0)
+27 'set_precision' 'set_precision' '' 1 ((MODULE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
+0 () () () 0 0)
+28 'single_t' 'derived_types' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC DECL UNKNOWN 0 0 FUNCTION GENERIC) (REAL 4 0 0 0 REAL ()) 0
+0 () () 0 () () () 0 0)
+29 'singlei' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
+30 'singler' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
+)
+
+('Atom' 0 2 'Ion' 0 3 'Single_t' 0 4 'atom' 0 15 'derived_types' 0 16
+'doublei' 0 17 'doubler' 0 18 'invalid' 0 19 'invalid_i' 0 20 'invalid_r'
+0 21 'ion' 0 22 'real_double' 0 23 'real_single' 0 24 'selected_int_kind'
+0 25 'selected_real_kind' 0 26 'set_precision' 0 27 'single_t' 0 28
+'singlei' 0 29 'singler' 0 30)

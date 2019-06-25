@@ -1,0 +1,9 @@
+o6    15.9994    2
+1031.912   4.16e+08   1.33e-01        
+1037.613   4.09e+08   6.60e-02        
+
+# first row: ion  |  atomic mass (uma)  |  no. of transitions
+# columns: wavelength (A)  |  Gamma (1/s)  |  f_osc
+# multiplet averaged quantities
+# SOURCE: NIST database: http://physics.nist.gov/PhysRefData/ASD/lines_form.html
+# query parameters: ion=o vi, output ordering=multiplet

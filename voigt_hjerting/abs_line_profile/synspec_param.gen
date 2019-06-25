@@ -1,0 +1,14 @@
+# ion-independent parameters
+5.0d-1	pixel_size_kms -- pixel size [km/s]
+1.0d-2	pixel_size_ang -- pixel size [Angstroem]; spectrum is rebinned to this
+gauss	line profile: gauss | voigt
+20.	fwhm_kms -- instrumental broadening (FWHM)
+1000.	signaltonoise -- signal-to-noise ratio (uniform); note 0 => S/N=1000
+FALSE	test_run_str -- use strongest transition of first ion; overrides psplot
+FALSE	psplot_str -- graphical output; requires gnuplot and gv!
+#
+# ion-dependent parameters
+# no. of ions
+# ion_name | log col_dens | b_value | z_abs
+1
+h1    14   20.   1.5

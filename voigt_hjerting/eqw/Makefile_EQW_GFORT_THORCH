@@ -1,0 +1,42 @@
+FC          = gfortran
+
+FDEBUG      = -Wall -pedantic -fbackslash -ffixed-line-length-132 \
+-fno-second-underscore -fbounds-check \
+-ffpe-trap=invalid,zero,overflow,underflow -fdump-core -fbacktrace -ggdb3
+
+FOPTIMIZED  = -Wall -fbackslash -ffixed-line-length-132 -fno-second-underscore \
+-fbounds-check \
+-ffpe-trap=invalid,zero,overflow,underflow -fdump-core -fbacktrace -ggdb3 -O
+
+#FFLAGS = $(FDEBUG)
+FFLAGS = $(FOPTIMIZED)
+
+TARGET = eqw
+
+OBJECTS = eqw.o id.o exp_h_ax.o exp_gauss_x.o
+MODULES = eqw_modules.o
+
+eqw: $(OBJECTS) eqw_subroutines.o $(MODULES) eqw_modules.f
+	$(FC) $(FFLAGS) $(OBJECTS) eqw_subroutines.o $(MODULES) -o $(TARGET)
+
+eqw.o:  eqw.f eqw_subroutines.o $(MODULES)
+	$(FC) $(FFLAGS) eqw.f -c
+
+id.o:  id.f 
+	$(FC) $(FFLAGS) id.f -c
+
+exp_gauss_x.o:  exp_gauss_x.f 
+	$(FC) $(FFLAGS) exp_gauss_x.f -c
+
+exp_h_ax.o:  exp_h_ax.f 
+	$(FC) $(FFLAGS) exp_h_ax.f -c
+
+eqw_subroutines.o:  eqw_subroutines.f $(MODULES)
+	$(FC) $(FFLAGS) eqw_subroutines.f -c
+
+eqw_modules.o:  eqw_modules.f
+	$(FC) $(FFLAGS) eqw_modules.f -c
+
+clean:
+	rm *.o
+	rm *.mod

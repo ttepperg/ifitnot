@@ -1,0 +1,29 @@
+FC          = gfortran-4.1
+FDEBUG      = -ffixed-line-length-132 -fno-second-underscore -fbounds-check -ffpe-trap=invalid,zero -g
+FOPTIMIZED  = -ffixed-line-length-132 -fno-second-underscore -fbounds-check -ffpe-trap=invalid,zero -O
+#
+LIB    = -L/home/volans/tepper/hdf5/lib -L/home/volans/tepper/hdf5/HDF5_Wrapper/lib/ -lhdf5 -lhdfwrapper
+INC     = -I/home/volans/tepper/hdf5/include  -I/home/volans/tepper/hdf5/HDF5_Wrapper/lib/
+
+FFLAGS = $(FDEBUG)
+
+TARGET = read_spec_hdf5
+
+OBJECTS = read_spec_hdf5.o
+MODULES = rw_modules.o
+
+read_spec_hdf5: $(OBJECTS) rw_subroutines.o $(MODULES) rw_modules.f
+	$(FC) $(FFLAGS) $(INC) $(LIB) $(OBJECTS) rw_subroutines.o $(MODULES) -o $(TARGET)
+
+read_spec_hdf5.o: read_spec_hdf5.f  rw_subroutines.o $(MODULES)
+	$(FC) $(FFLAGS) $(INC) read_spec_hdf5.f -c
+
+rw_subroutines.o:  rw_subroutines.f $(MODULES)
+	$(FC) $(FFLAGS) $(INC) rw_subroutines.f -c
+
+rw_modules.o:  rw_modules.f
+	$(FC) $(FFLAGS) $(INC) rw_modules.f -c
+
+clean:
+	rm *.o
+	rm *.mod

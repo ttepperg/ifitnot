@@ -1,0 +1,6 @@
+c4    12.0107    2
+1548.2041    2.60000e+08    0.189900
+1550.7812    2.60000e+08    0.094750
+
+# first row: ion  |  atomic mass (uma)  |  no. of transitions
+# columns: wavelength (A)  |  Gamma (1/s)  |  f_osc

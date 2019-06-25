@@ -1,0 +1,931 @@
+GFORTRAN module version '10' created from ifit_modules.f
+MD5:268106fd1e5a2f0e2ba3a8e253de255c -- If you edit this, you'll get what you deserve.
+
+(() () () () () () () () () () () () () () () () () () () () () () ()
+() () () ())
+
+()
+
+(('absorption_line' 'ifit_variables' 2) ('ion' 'ifit_variables' 3) (
+'link' 'ifit_variables' 4) ('single_t' 'ifit_variables' 5))
+
+()
+
+()
+
+()
+
+(2 'Absorption_line' 'ifit_variables' '' 1 ((DERIVED UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 SEQUENCE) (UNKNOWN 0 0 0 0 UNKNOWN ())
+0 0 () () 0 ((6 'status' (INTEGER 4 0 0 0 INTEGER ()) () (UNKNOWN-FL
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (7
+'vel_c' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (8 'col_dens' (
+REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+UNKNOWN 0 0) UNKNOWN-ACCESS ()) (9 'b_value' (REAL 8 0 0 0 REAL ()) () (
+UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ()) (10 'vel_c_err' (REAL 8 0 0 0 REAL ()) () (
+UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ()) (11 'col_dens_err' (REAL 8 0 0 0 REAL ()) () (
+UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ()) (12 'b_value_err' (REAL 8 0 0 0 REAL ()) () (
+UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ()) (13 'v_coldens_cov' (REAL 8 0 0 0 REAL ()) () (
+UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ()) (14 'v_b_cov' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (15
+'coldens_b_cov' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (16 'eq_width' (
+REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+UNKNOWN 0 0) UNKNOWN-ACCESS ())) PUBLIC (() () () ()) () 0 0 53685477)
+3 'Ion' 'ifit_variables' '' 1 ((DERIVED UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 SEQUENCE ALLOC_COMP) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0
+0 () () 0 ((17 'name' (CHARACTER 1 0 0 0 CHARACTER ((CONSTANT (INTEGER 4
+0 0 0 INTEGER ()) 0 '10'))) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (18 'mass' (REAL 8 0 0 0 REAL ())
+() (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ()) (19 'num_transitions' (INTEGER 4 0 0 0 INTEGER ()) ()
+(UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ()) (20 'transition' (DERIVED 5 0 0 0 DERIVED ()) (1 0
+DEFERRED () ()) (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN
+0 0 ALLOCATABLE DIMENSION) UNKNOWN-ACCESS ()) (21 'component' (DERIVED 2
+0 0 0 DERIVED ()) (1 0 DEFERRED () ()) (UNKNOWN-FL UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 ALLOCATABLE DIMENSION) UNKNOWN-ACCESS ()))
+PUBLIC (() () () ()) () 0 0 39754793)
+4 'Link' 'ifit_variables' '' 1 ((DERIVED UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 SEQUENCE) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 0 (
+(22 'component' (INTEGER 4 0 0 0 INTEGER ()) () (UNKNOWN-FL
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (23
+'transition' (INTEGER 4 0 0 0 INTEGER ()) () (UNKNOWN-FL UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ())) PUBLIC (() () () ())
+() 0 0 50329273)
+5 'Single_t' 'ifit_variables' '' 1 ((DERIVED UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 SEQUENCE) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () () 0 (
+(24 'lambda_0' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (25 'f_osc' (REAL 8
+0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN
+UNKNOWN 0 0) UNKNOWN-ACCESS ()) (26 'big_gamma' (REAL 8 0 0 0 REAL ()) ()
+(UNKNOWN-FL UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0)
+UNKNOWN-ACCESS ()) (27 'tau_0' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ()) (28
+'gamma_over_nu' (REAL 8 0 0 0 REAL ()) () (UNKNOWN-FL UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) UNKNOWN-ACCESS ())) PUBLIC (() () () ())
+() 0 0 50025276)
+29 '__convert_i4_r8' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 FUNCTION ELEMENTAL PURE) (REAL 8 0 0 0
+REAL ()) 0 0 () () 29 () () () 0 0)
+30 '__convert_r8_r4' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 FUNCTION ELEMENTAL PURE) (REAL 4 0 0 0
+REAL ()) 0 0 () () 30 () () () 0 0)
+31 'abs_profile_bounds' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
+0 0 0 INTEGER ()) 0 0 () (2 0 DEFERRED () () () ()) 0 () () () 0 0)
+32 'abs_profile_id' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+33 'abs_profile_id_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '3'))) 0 0 () () 0 () () () 0 0)
+34 'abs_profile_tag' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
+0 0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+35 'absorption_line' 'ifit_variables' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC DECL UNKNOWN 0 0 FUNCTION GENERIC) (REAL 4 0 0 0 REAL ()) 0
+0 () () 0 () () () 0 0)
+36 'absorption_strength_lim' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+37 'absorption_type' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '6'))) 0 0 () () 0 () () () 0 0)
+38 'absorption_type_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '24'))) 0 0 () () 0 () () () 0 0)
+39 'absprofile_size_px' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+40 'add_more' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+41 'adding_component' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+42 'alpha' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 0 REAL ())
+0 0 () (2 0 DEFERRED () () () ()) 0 () () () 0 0)
+43 'aod_data' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+44 'aod_residum' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+45 'aod_residum_error' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+46 'array_aux' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 DIMENSION) (REAL 8 0 0 0 REAL ())
+0 0 () (1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '10')) 0 () () () 0 0)
+47 'average_flux_local' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+48 'average_noise_global' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+49 'average_noise_local' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+50 'average_noise_local_aod' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+51 'average_noise_local_smooth' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+52 'average_sn_global' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+53 'average_sn_local' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+54 'b_instrumental' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+55 'b_value_max' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+56 'b_value_min' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+57 'bad_pixel' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+58 'bad_pixel_counts' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+59 'best_chi2_add' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+60 'best_reduced_chi2' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+61 'best_reduced_chi2_succ' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+62 'char' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN UNKNOWN 0 0 FUNCTION) (REAL 4 0 0 0 REAL ()) 0 0 () () 62 () ()
+() 0 0)
+63 'check_fit' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+64 'check_fit_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () () 0 () () () 0 0)
+65 'chi2_add_save' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+66 'chi2_current' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+67 'chi2_current_succ' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+68 'chi2_decrease_iteration' 'ifit_variables' '' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '10') () 0 ()
+() () 0 0)
+69 'chi2_decrease_rate_average' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+70 'chi2_decrease_rate_average_array' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 DIMENSION) (REAL 8
+0 0 0 REAL ()) 0 0 () (1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 0 INTEGER ())
+0 '1') (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '10')) 0 () () () 0 0)
+71 'chi2_decrease_rate_diff' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+72 'chi2_discard_save' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+73 'chi2_evolution' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+74 'chi2_min_abs_local' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+75 'chi2_previous' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+76 'chi2_start' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+77 'chi2_terms' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+78 'chi2bad_reduced' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+79 'chi2good_reduced' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+80 'col_dens_lim' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+81 'col_dens_max' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+82 'col_dens_min' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+83 'colour_errmsg_prefix' 'ifit_variables' '' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '64'))) 0 0 () (
+CONSTANT (CHARACTER 1 0 0 0 CHARACTER (())) 0 64
+'\U0000001b[1;31m                                                         ')
+() 0 () () () 0 0)
+84 'colour_msg_suffix' 'ifit_variables' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '64'))) 0 0 () (CONSTANT (
+CHARACTER 1 0 0 0 CHARACTER (())) 0 64
+' \U0000001b[0m                                                           ')
+() 0 () () () 0 0)
+85 'colour_statmsg_prefix' 'ifit_variables' '' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '64'))) 0 0 () (
+CONSTANT (CHARACTER 1 0 0 0 CHARACTER (())) 0 64
+'\U0000001b[1;32m                                                         ')
+() 0 () () () 0 0)
+86 'colour_warnmsg_prefix' 'ifit_variables' '' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '64'))) 0 0 () (
+CONSTANT (CHARACTER 1 0 0 0 CHARACTER (())) 0 64
+'\U0000001b[1;33m                                                         ')
+() 0 () () () 0 0)
+87 'component_added' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+88 'component_discarded' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+89 'component_id' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
+0 0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+90 'component_irrelevant' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0
+LOGICAL ()) 0 0 () () 0 () () () 0 0)
+91 'component_number_evolution' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE
+DIMENSION) (REAL 4 0 0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () ()
+0 0)
+92 'conf_hi' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+93 'conf_lo' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+94 'conf_min' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+95 'convergence_criterium' 'ifit_variables' '' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0
+REAL ()) 0 0 () (CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.28f5c28f5c28f6@-1')
+() 0 () () () 0 0)
+96 'convolve' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+97 'covar' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 0 REAL ())
+0 0 () (2 0 DEFERRED () () () ()) 0 () () () 0 0)
+98 'd2fdv2' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 0 REAL ())
+0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+99 'debug' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0 () () 0 () ()
+() 0 0)
+100 'debug_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () () 0 () () () 0 0)
+101 'degrees_of_freedom' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+102 'degrees_of_freedom_save' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+103 'der_minimum' 'ifit_variables' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.10c6f7a0b5ed8d@-4') () 0 () () () 0
+0)
+104 'dfdv' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 0 REAL ())
+0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+105 'discarded_component' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+106 'discarded_components' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+107 'do_fit' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+108 'doublei' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '8') () 0 () () () 0 0)
+109 'doubler' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '8') () 0 () () () 0 0)
+110 'empty_abs_profiles' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+111 'equiv_width_lim_ma' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+112 'errmsg' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '256'))) 0 0 () () 0 () () () 0
+0)
+113 'file_chi2_evolution' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '256'))) 0 0 () ()
+0 () () () 0 0)
+114 'first_call_visual' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+115 'fit_attempt' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+116 'fit_type_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '24'))) 0 0 () () 0 () () () 0 0)
+117 'fitted_components' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+118 'flux' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 0 REAL ())
+0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+119 'flux_conv' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+120 'flux_residum' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+121 'flux_residum_error' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+122 'flux_smooth' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+123 'fwhm_kms' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+124 'fwhm_kms_save' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+125 'ifit_file_prefix' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (
+CHARACTER 1 0 0 0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0
+'256'))) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+126 'ifit_lines' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (
+CHARACTER 1 0 0 0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0
+'256'))) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+127 'ifit_variables' 'ifit_variables' '' 1 ((MODULE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
+0 () () () 0 0)
+128 'inserted_components' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+129 'invalid' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '20'))) 0 0 () (CONSTANT (
+CHARACTER 1 0 0 0 CHARACTER (())) 0 20 'INVALID             ') () 0 () ()
+() 0 0)
+130 'invalid_i' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '-1234567890') () 0 () () ()
+0 0)
+131 'invalid_r' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '-0.1d42aea2879f2e@83') () 0 () () ()
+0 0)
+132 'ion' 'ifit_variables' '' 1 ((PROCEDURE UNKNOWN-INTENT UNKNOWN-PROC
+DECL UNKNOWN 0 0 FUNCTION GENERIC) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () ()
+0 () () () 0 0)
+133 'ion_index' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+134 'ions' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (DERIVED 3 0 0 0
+DERIVED ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+135 'iter_max' 'ifit_variables' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '500') () 0 () () () 0 0)
+136 'itime_end' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 8 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+137 'itime_start' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 8 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+138 'lambda_mrqmin' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+139 'lambda_mrqmin_max' 'ifit_variables' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () (
+CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.3e800000000000@3') () 0 () () () 0
+0)
+140 'lead' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (DERIVED 4 0 0 0
+DERIVED ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+141 'linear_chi2_spec' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+142 'link' 'ifit_variables' '' 1 ((PROCEDURE UNKNOWN-INTENT UNKNOWN-PROC
+DECL UNKNOWN 0 0 FUNCTION GENERIC) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () ()
+0 () () () 0 0)
+143 'log_lambda_mrqmin_oscillation' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 DIMENSION) (REAL 8
+0 0 0 REAL ()) 0 0 () (1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 0 INTEGER ())
+0 '1') (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '10')) 0 () () () 0 0)
+144 'log_lambda_mrqmin_oscillation_diff' 'ifit_variables' '' 1 ((
+VARIABLE UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8
+0 0 0 REAL ()) 0 0 () () 0 () () () 0 0)
+145 'max_abs_profiles' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+146 'max_chi2' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 DIMENSION) (REAL 8 0 0 0 REAL ())
+0 0 () (1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '2')) 0 () () () 0 0)
+147 'max_components' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+148 'max_components_abs' 'ifit_variables' '' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '500') () 0
+() () () 0 0)
+149 'max_num_param' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+150 'mean_chi2' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+151 'min_absprofile_size_px' 'ifit_variables' '' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5') () 0 ()
+() () 0 0)
+152 'min_chi2' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 DIMENSION) (REAL 8 0 0 0 REAL ())
+0 0 () (1 0 EXPLICIT (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '1') (
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '2')) 0 () () () 0 0)
+153 'min_component_res_px' 'ifit_variables' '' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '3') () 0 ()
+() () 0 0)
+154 'min_dof' 'ifit_variables' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '2') () 0 () () () 0 0)
+155 'modelflux' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+156 'modelflux_convolved' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE
+DIMENSION) (REAL 8 0 0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () ()
+0 0)
+157 'modelflux_local' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+158 'modelflux_local_aux' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE
+DIMENSION) (REAL 8 0 0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () ()
+0 0)
+159 'mrqmin_iteration' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+160 'neg_flux' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+161 'neg_flux_counts' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+162 'neg_noise' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+163 'neg_noise_counts' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+164 'noise' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 0 REAL ())
+0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+165 'nsigma' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+166 'num_abs_profiles' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+167 'num_abs_profiles_save' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+168 'num_components' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+169 'num_components_save' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+170 'num_ions' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+171 'num_param' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+172 'num_param_save' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+173 'num_param_var' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+174 'outlier_pixels' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+175 'output_abs_profile_info_debug' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '128'))) 0 0 () ()
+0 () () () 0 0)
+176 'output_abs_profile_info_short' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '128'))) 0 0 () ()
+0 () () () 0 0)
+177 'output_dashed_line' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '128'))) 0 0 () () 0 () () () 0
+0)
+178 'output_fit_results_debug' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '128'))) 0 0 () ()
+0 () () () 0 0)
+179 'output_fit_results_short' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '128'))) 0 0 () ()
+0 () () () 0 0)
+180 'output_fitabs_profile_info_1' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '128'))) 0 0 () ()
+0 () () () 0 0)
+181 'output_fitabs_profile_info_2' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '128'))) 0 0 () ()
+0 () () () 0 0)
+182 'output_mrqmin_iteration_1_debug' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '256'))) 0 0 () ()
+0 () () () 0 0)
+183 'output_mrqmin_iteration_1_short' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '256'))) 0 0 () ()
+0 () () () 0 0)
+184 'output_mrqmin_iteration_2_debug' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '256'))) 0 0 () ()
+0 () () () 0 0)
+185 'output_mrqmin_iteration_2_short' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '256'))) 0 0 () ()
+0 () () () 0 0)
+186 'param_to_min' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
+0 0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+187 'pixel_max' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+188 'pixel_min' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+189 'pixel_size_ang' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+190 'pixel_size_ang_local' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+191 'pixel_size_kms' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+192 'pixel_size_kms_local' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0
+REAL ()) 0 0 () () 0 () () () 0 0)
+193 'processed_abs_profiles' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+194 'profile_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () () 0 () () () 0 0)
+195 'psplot' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+196 'psplot_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () () 0 () () () 0 0)
+197 'quite' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0 () () 0 () ()
+() 0 0)
+198 'quite_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () () 0 () () () 0 0)
+199 'real_double' 'set_precision' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+200 'real_single' 'set_precision' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 4 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+201 'resol_elem_px' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+202 'scale_noise' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+203 'selected_int_kind' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 FUNCTION) (REAL 4 0 0 0 REAL ()) 0 0 ()
+() 203 () () () 0 0)
+204 'selected_real_kind' '(intrinsic)' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0 FUNCTION) (REAL 4 0 0 0 REAL ()) 0 0 ()
+() 204 () () () 0 0)
+205 'set_precision' 'set_precision' '' 1 ((MODULE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN UNKNOWN 0 0) (UNKNOWN 0 0 0 0 UNKNOWN ()) 0 0 () ()
+0 () () () 0 0)
+206 'sig_file' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '256'))) 0 0 () () 0 () () () 0
+0)
+207 'sigma' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0 0 0 REAL ())
+0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+208 'sigma_bad_pixel' 'ifit_variables' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 4 0 0 0 REAL ()) 0 0 () (
+CONSTANT (REAL 4 0 0 0 REAL ()) 0 '0.a000000@1') () 0 () () () 0 0)
+209 'single_ion_fit' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+210 'single_ion_fit_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () () 0 () () () 0 0)
+211 'single_t' 'ifit_variables' '' 1 ((PROCEDURE UNKNOWN-INTENT
+UNKNOWN-PROC DECL UNKNOWN 0 0 FUNCTION GENERIC) (REAL 4 0 0 0 REAL ()) 0
+0 () () 0 () () () 0 0)
+212 'singlei' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
+213 'singler' 'set_precision' '' 1 ((PARAMETER UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() (CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '4') () 0 () () () 0 0)
+214 'smoothing_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '24'))) 0 0 () () 0 () () () 0 0)
+215 'specfile_in' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '256'))) 0 0 () () 0 () () () 0
+0)
+216 'spectrum_shift_px' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+217 'spectrum_shifted' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+218 'spectrum_shifted_str' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () () 0
+() () () 0 0)
+219 'spectrum_size_px' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+220 'spectrum_size_px_effective' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+221 'splitted_abs_profiles' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+222 'statmsg' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '256'))) 0 0 () () 0 () () () 0
+0)
+223 'strong_convergence_criterium' 'ifit_variables' '' 1 ((PARAMETER
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0
+REAL ()) 0 0 () (CONSTANT (REAL 8 0 0 0 REAL ()) 0 '0.4189374bc6a7f0@-2')
+() 0 () () () 0 0)
+224 'strongest' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
+0 0 0 INTEGER ()) 0 0 () (2 0 DEFERRED () () () ()) 0 () () () 0 0)
+225 'success_mrqmin_iteration' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+226 'sweep' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0 () () 0 () ()
+() 0 0)
+227 'tau_central_lim' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+228 'tau_sat' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+229 'test_run' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+230 'test_run_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () () 0 () () () 0 0)
+231 'time_end' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '24'))) 0 0 () () 0 () () () 0 0)
+232 'time_start' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '24'))) 0 0 () () 0 () () () 0 0)
+233 'tot_iter_per_abs_profile' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+234 'trial_param' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+235 'trial_param_cov' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (2 0 DEFERRED () () () ()) 0 () () () 0 0)
+236 'trial_param_err' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+237 'trial_param_save' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+238 'true_ion' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
+0 0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+239 'true_transition' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
+0 0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+240 'unabsorbed_pixel' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (INTEGER 4
+0 0 0 INTEGER ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+241 'unidentified_components' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+242 'use_smooth_flux' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+243 'use_smooth_flux_str' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0
+0 CHARACTER ((CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () () 0
+() () () 0 0)
+244 'valid_components_save' 'ifit_variables' '' 1 ((VARIABLE
+UNKNOWN-INTENT UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0
+INTEGER ()) 0 0 () () 0 () () () 0 0)
+245 'velocity' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+246 'velocity_aux' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+247 'velocity_local' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+248 'velocity_max' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+249 'velocity_min' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+250 'verbose' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+251 'verbose_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () () 0 () () () 0 0)
+252 'visual' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (LOGICAL 4 0 0 0 LOGICAL ()) 0 0
+() () 0 () () () 0 0)
+253 'visual_counter' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+254 'visual_str' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '5'))) 0 0 () () 0 () () () 0 0)
+255 'warnmsg' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (CHARACTER 1 0 0 0 CHARACTER ((
+CONSTANT (INTEGER 4 0 0 0 INTEGER ()) 0 '256'))) 0 0 () () 0 () () () 0
+0)
+256 'weak_component_id' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (INTEGER 4 0 0 0 INTEGER ()) 0 0
+() () 0 () () () 0 0)
+257 'wl_comp' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+258 'wl_max' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+259 'wl_min' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+260 'wlength' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+261 'wlength_aux' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+262 'wlength_tolerance' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () ()
+0 () () () 0 0)
+263 'xdata_in' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+264 'ydata_in' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+265 'yerror_in' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+266 'z_abs_comp' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT
+UNKNOWN-PROC UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 8 0
+0 0 REAL ()) 0 0 () (1 0 DEFERRED () ()) 0 () () () 0 0)
+267 'z_min' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0 ALLOCATABLE DIMENSION) (REAL 4 0 0 0 REAL ())
+0 0 () (2 0 DEFERRED () () () ()) 0 () () () 0 0)
+268 'z_qso' 'ifit_variables' '' 1 ((VARIABLE UNKNOWN-INTENT UNKNOWN-PROC
+UNKNOWN IMPLICIT-SAVE 0 0) (REAL 8 0 0 0 REAL ()) 0 0 () () 0 () () () 0
+0)
+)
+
+('Absorption_line' 0 2 'Ion' 0 3 'Link' 0 4 'Single_t' 0 5
+'__convert_i4_r8' 0 29 '__convert_r8_r4' 0 30 'abs_profile_bounds' 0 31
+'abs_profile_id' 0 32 'abs_profile_id_str' 0 33 'abs_profile_tag' 0 34
+'absorption_line' 0 35 'absorption_strength_lim' 0 36 'absorption_type'
+0 37 'absorption_type_str' 0 38 'absprofile_size_px' 0 39 'add_more' 0
+40 'adding_component' 0 41 'alpha' 0 42 'aod_data' 0 43 'aod_residum' 0
+44 'aod_residum_error' 0 45 'array_aux' 0 46 'average_flux_local' 0 47
+'average_noise_global' 0 48 'average_noise_local' 0 49
+'average_noise_local_aod' 0 50 'average_noise_local_smooth' 0 51
+'average_sn_global' 0 52 'average_sn_local' 0 53 'b_instrumental' 0 54
+'b_value_max' 0 55 'b_value_min' 0 56 'bad_pixel' 0 57 'bad_pixel_counts'
+0 58 'best_chi2_add' 0 59 'best_reduced_chi2' 0 60
+'best_reduced_chi2_succ' 0 61 'char' 0 62 'check_fit' 0 63 'check_fit_str'
+0 64 'chi2_add_save' 0 65 'chi2_current' 0 66 'chi2_current_succ' 0 67
+'chi2_decrease_iteration' 0 68 'chi2_decrease_rate_average' 0 69
+'chi2_decrease_rate_average_array' 0 70 'chi2_decrease_rate_diff' 0 71
+'chi2_discard_save' 0 72 'chi2_evolution' 0 73 'chi2_min_abs_local' 0 74
+'chi2_previous' 0 75 'chi2_start' 0 76 'chi2_terms' 0 77 'chi2bad_reduced'
+0 78 'chi2good_reduced' 0 79 'col_dens_lim' 0 80 'col_dens_max' 0 81
+'col_dens_min' 0 82 'colour_errmsg_prefix' 0 83 'colour_msg_suffix' 0 84
+'colour_statmsg_prefix' 0 85 'colour_warnmsg_prefix' 0 86
+'component_added' 0 87 'component_discarded' 0 88 'component_id' 0 89
+'component_irrelevant' 0 90 'component_number_evolution' 0 91 'conf_hi'
+0 92 'conf_lo' 0 93 'conf_min' 0 94 'convergence_criterium' 0 95
+'convolve' 0 96 'covar' 0 97 'd2fdv2' 0 98 'debug' 0 99 'debug_str' 0
+100 'degrees_of_freedom' 0 101 'degrees_of_freedom_save' 0 102
+'der_minimum' 0 103 'dfdv' 0 104 'discarded_component' 0 105
+'discarded_components' 0 106 'do_fit' 0 107 'doublei' 0 108 'doubler' 0
+109 'empty_abs_profiles' 0 110 'equiv_width_lim_ma' 0 111 'errmsg' 0 112
+'file_chi2_evolution' 0 113 'first_call_visual' 0 114 'fit_attempt' 0
+115 'fit_type_str' 0 116 'fitted_components' 0 117 'flux' 0 118
+'flux_conv' 0 119 'flux_residum' 0 120 'flux_residum_error' 0 121
+'flux_smooth' 0 122 'fwhm_kms' 0 123 'fwhm_kms_save' 0 124
+'ifit_file_prefix' 0 125 'ifit_lines' 0 126 'ifit_variables' 0 127
+'inserted_components' 0 128 'invalid' 0 129 'invalid_i' 0 130 'invalid_r'
+0 131 'ion' 0 132 'ion_index' 0 133 'ions' 0 134 'iter_max' 0 135
+'itime_end' 0 136 'itime_start' 0 137 'lambda_mrqmin' 0 138
+'lambda_mrqmin_max' 0 139 'lead' 0 140 'linear_chi2_spec' 0 141 'link' 0
+142 'log_lambda_mrqmin_oscillation' 0 143
+'log_lambda_mrqmin_oscillation_diff' 0 144 'max_abs_profiles' 0 145
+'max_chi2' 0 146 'max_components' 0 147 'max_components_abs' 0 148
+'max_num_param' 0 149 'mean_chi2' 0 150 'min_absprofile_size_px' 0 151
+'min_chi2' 0 152 'min_component_res_px' 0 153 'min_dof' 0 154 'modelflux'
+0 155 'modelflux_convolved' 0 156 'modelflux_local' 0 157
+'modelflux_local_aux' 0 158 'mrqmin_iteration' 0 159 'neg_flux' 0 160
+'neg_flux_counts' 0 161 'neg_noise' 0 162 'neg_noise_counts' 0 163 'noise'
+0 164 'nsigma' 0 165 'num_abs_profiles' 0 166 'num_abs_profiles_save' 0
+167 'num_components' 0 168 'num_components_save' 0 169 'num_ions' 0 170
+'num_param' 0 171 'num_param_save' 0 172 'num_param_var' 0 173
+'outlier_pixels' 0 174 'output_abs_profile_info_debug' 0 175
+'output_abs_profile_info_short' 0 176 'output_dashed_line' 0 177
+'output_fit_results_debug' 0 178 'output_fit_results_short' 0 179
+'output_fitabs_profile_info_1' 0 180 'output_fitabs_profile_info_2' 0
+181 'output_mrqmin_iteration_1_debug' 0 182
+'output_mrqmin_iteration_1_short' 0 183 'output_mrqmin_iteration_2_debug'
+0 184 'output_mrqmin_iteration_2_short' 0 185 'param_to_min' 0 186
+'pixel_max' 0 187 'pixel_min' 0 188 'pixel_size_ang' 0 189
+'pixel_size_ang_local' 0 190 'pixel_size_kms' 0 191 'pixel_size_kms_local'
+0 192 'processed_abs_profiles' 0 193 'profile_str' 0 194 'psplot' 0 195
+'psplot_str' 0 196 'quite' 0 197 'quite_str' 0 198 'real_double' 0 199
+'real_single' 0 200 'resol_elem_px' 0 201 'scale_noise' 0 202
+'selected_int_kind' 0 203 'selected_real_kind' 0 204 'set_precision' 0
+205 'sig_file' 0 206 'sigma' 0 207 'sigma_bad_pixel' 0 208
+'single_ion_fit' 0 209 'single_ion_fit_str' 0 210 'single_t' 0 211
+'singlei' 0 212 'singler' 0 213 'smoothing_str' 0 214 'specfile_in' 0
+215 'spectrum_shift_px' 0 216 'spectrum_shifted' 0 217
+'spectrum_shifted_str' 0 218 'spectrum_size_px' 0 219
+'spectrum_size_px_effective' 0 220 'splitted_abs_profiles' 0 221 'statmsg'
+0 222 'strong_convergence_criterium' 0 223 'strongest' 0 224
+'success_mrqmin_iteration' 0 225 'sweep' 0 226 'tau_central_lim' 0 227
+'tau_sat' 0 228 'test_run' 0 229 'test_run_str' 0 230 'time_end' 0 231
+'time_start' 0 232 'tot_iter_per_abs_profile' 0 233 'trial_param' 0 234
+'trial_param_cov' 0 235 'trial_param_err' 0 236 'trial_param_save' 0 237
+'true_ion' 0 238 'true_transition' 0 239 'unabsorbed_pixel' 0 240
+'unidentified_components' 0 241 'use_smooth_flux' 0 242
+'use_smooth_flux_str' 0 243 'valid_components_save' 0 244 'velocity' 0
+245 'velocity_aux' 0 246 'velocity_local' 0 247 'velocity_max' 0 248
+'velocity_min' 0 249 'verbose' 0 250 'verbose_str' 0 251 'visual' 0 252
+'visual_counter' 0 253 'visual_str' 0 254 'warnmsg' 0 255
+'weak_component_id' 0 256 'wl_comp' 0 257 'wl_max' 0 258 'wl_min' 0 259
+'wlength' 0 260 'wlength_aux' 0 261 'wlength_tolerance' 0 262 'xdata_in'
+0 263 'ydata_in' 0 264 'yerror_in' 0 265 'z_abs_comp' 0 266 'z_min' 0
+267 'z_qso' 0 268)

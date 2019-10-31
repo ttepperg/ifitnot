@@ -2,10 +2,21 @@ Author: Thor Tepper-Garcia
 
 Date:	2014-
 
+# DISCLAIMER
+
+The ifitnot code is distributed freely under the GNU general public license
+without any guarantee.
+
 # ACKNOWLEDGEMENT
 
-This code has not as yet been published anywhere. Please acknowledge the author
-and this Git Repository when making use of it.
+When making use of this code in its enterity or partially,
+please ackowledge the author by citing this Git repository and:
+
+Tepper-García, Thorsten, 2006, Monthly Notices of the Royal Astronomical Society,
+Volume 369, Issue 4, pp. 2025-2035
+
+https://ui.adsabs.harvard.edu/abs/2006MNRAS.369.2025T/abstract
+
 
 # Documentation
 
